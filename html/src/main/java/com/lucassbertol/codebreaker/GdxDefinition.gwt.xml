@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.11.0//EN" "https://www.gwtproject.org/doctype/2.11.0/gwt-module.dtd">
+<module rename-to="html">
+
+  <!-- Paths to source are relative to this file and separated by slashes ('/'). -->
+  <source path="" />
+
+  <!-- Any resources placed under package public_html, relative to this file, will be copied verbatim into the final webapp folder. -->
+  <public path="public_html" />
+
+  <!-- libGDX GWT backend -->
+  <inherits name="com.badlogic.gdx.backends.gdx_backends_gwt" />
+
+  <!-- Inherit core module -->
+  <inherits name="com.lucassbertol.codebreaker.MainGame" />
+
+  <!-- Ponto de entrada do jogo -->
+  <entry-point class="com.lucassbertol.codebreaker.gwt.GwtLauncher" />
+
+  <!-- Caminho para os assets -->
+  <set-configuration-property name="gdx.assetpath" value="../assets" />
+
+  <!-- Configurações de compilação GWT -->
+  <set-configuration-property name="xsiframe.failIfScriptTag" value="FALSE"/>
+  <set-property name="user.agent" value="gecko1_8,safari"/>
+  <collapse-property name="user.agent" values="*" />
+
+  <extend-configuration-property name="gdx.reflect.include" value="com.lucassbertol.codebreaker.data.QuestionsData" />
+  <extend-configuration-property name="gdx.reflect.include" value="com.lucassbertol.codebreaker.data.Question" />
+
+</module>

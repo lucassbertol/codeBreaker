@@ -1,0 +1,1104 @@
+{
+  "questoes": [
+    {
+      "id": 1,
+      "title": "Invasao de Servidor",
+      "text": "Um hacker, conhecido como 'ZeroCool', esta tentando acessar um servidor. Ele precisa que a variavel 'acesso' seja verdadeira (true) para prosseguir. Complete o codigo para atribuir o valor correto.",
+      "question": "#include <stdbool.h>\n\nint main() {\n    bool acesso = __?__;\n    if (acesso) {\n        printf(\"Acesso permitido\");\n    }\n    return 0;\n}",
+      "answer": [
+        [
+          "true"
+        ]
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Script de Ataque",
+      "text": "A agente 'Trinity' precisa montar um script simples para testar uma vulnerabilidade. O script deve apenas imprimir uma mensagem de sucesso. Reordene as linhas para o script funcionar. [ Utilize o formato de resposta 1,2,3,4... ]",
+      "question": "1 - printf(\"Script executado com sucesso.\");\n2 - int main() {\n3 - return 0;\n4 - }\n5 - #include <stdio.h>",
+      "answer": [
+        [
+          "5,2,1,3,4"
+        ]
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Contador de Tentativas",
+      "text": "Um script de forca bruta precisa contar 5 tentativas de acesso, de 0 a 4. Escolha a alternativa que define o loop 'for' corretamente.",
+      "question": "#include <stdio.h>\n\nint main() {\n    for (int i = 0; __?__; i++) {\n        printf(\"Tentativa %d\\n\", i);\n    }\n    return 0;\n}\n\nA) i > 5\nB) i < 5\nC) i <= 4\nD) i = 5",
+      "answer": [
+        [
+          "B"
+        ]
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Porta Secreta",
+      "text": "O 'Ghost' precisa se conectar a uma porta especifica. O programa deve verificar se o valor da 'porta' e igual a 8080. Complete a condicao.",
+      "question": "#include <stdio.h>\n\nint main() {\n    int porta = 8080;\n    if (porta __?__ 8080) {\n        printf(\"Conexao estabelecida.\\n\");\n    }\n    return 0;\n}",
+      "answer": [
+        [
+          "=="
+        ]
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Descompilador Simples",
+      "text": "Um programa foi quebrado em partes. 'Neo' precisa remonta-lo para declarar uma variavel 'chave' com valor 1234 e imprimi-la. Ordene as linhas.",
+      "question": "1 - int chave = 1234;\n2 - }\n3 - #include <stdio.h>\n4 - int main() {\n5 - printf(\"%d\", chave);",
+      "answer": [
+        [
+          "3,4,1,5,2"
+        ]
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Ignorando o Firewall",
+      "text": "Um script precisa continuar executando enquanto o firewall estiver inativo (valor 0). Complete a condicao do loop 'while' para testar se 'firewallAtivo' e igual a 0.",
+      "question": "#include <stdio.h>\n\nint main() {\n    int firewallAtivo = 0;\n    while (__?__) {\n        printf(\"Executando...\\n\");\n        firewallAtivo = 1; // Simula o firewall sendo ativado\n    }\n    return 0;\n}\n\nA) firewallAtivo == 1\nB) firewallAtivo > 0\nC) firewallAtivo == 0\nD) firewallAtivo != 1",
+      "answer": [
+        [
+          "C"
+        ]
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Payload Oculto",
+      "text": "Um payload e ativado se a variavel 'codigo' for diferente de 0. Complete a condicao 'if' para fazer essa verificacao.",
+      "question": "#include <stdio.h>\n\nint main() {\n    int codigo = 99;\n    if (codigo __?__ 0) {\n        printf(\"Payload ativado.\\n\");\n    }\n    return 0;\n}",
+      "answer": [
+        [
+          "!="
+        ]
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Mensagem Criptografada",
+      "text": "'Oracle' precisa de um programa que imprima o caractere 'X' na tela. Reorganize o codigo para que ele funcione corretamente.",
+      "question": "1 - return 0;\n2 - int main() {\n3 - printf(\"%c\", 'X');\n4 - #include <stdio.h>\n5 - }",
+      "answer": [
+        [
+          "4,2,3,1,5"
+        ]
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Desativando a Seguranca",
+      "text": "Para desativar um sistema, a variavel 'seguranca' deve ser decrementada de 1 para 0. Qual operador faz isso?",
+      "question": "#include <stdio.h>\n\nint main() {\n    int seguranca = 1;\n    __?__;\n    printf(\"Seguranca: %d\\n\", seguranca);\n    return 0;\n}\n\nA) seguranca++\nB) seguranca = 0\nC) seguranca--\nD) seguranca + 1",
+      "answer": [
+        [
+          "C"
+        ]
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Verificador de Root",
+      "text": "Um script de invasao verifica se o ID do usuario e 0 (root). Se for, ele concede acesso. Complete o espaco para declarar a variavel 'userID'.",
+      "question": "#include <stdio.h>\n\nint main() {\n    __?__ userID = 0;\n    if (userID == 0) {\n        printf(\"Acesso root concedido.\\n\");\n    }\n    return 0;\n}",
+      "answer": [
+        [
+          "int"
+        ]
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Loop Infinito",
+      "text": "Um cracker criou um loop para sobrecarregar o sistema. Reordene as linhas para criar um programa que imprime 'Ataque!' continuamente. [ Utilize o formato de resposta 1,2,3,4... ]",
+      "question": "1 - }\n2 - while(1) {\n3 - #include <stdio.h>\n4 - printf(\"Ataque!\\n\");\n5 - int main() {",
+      "answer": [
+        [
+          "3,5,2,4,1"
+        ]
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Contagem Regressiva",
+      "text": "Uma 'bomba logica' precisa de um contador que vai de 3 para 1. Complete o loop 'for' para essa contagem regressiva.",
+      "question": "#include <stdio.h>\n\nint main() {\n    for (int i = 3; __?__; i--) {\n        printf(\"%d..\\n\", i);\n    }\n    return 0;\n}\n\nA) i > 0\nB) i < 3\nC) i >= 0\nD) i == 0",
+      "answer": [
+        [
+          "A"
+        ]
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Chave de Acesso",
+      "text": "'Cipher' precisa usar uma chave numerica para desbloquear um arquivo. Complete o codigo para declarar a variavel 'chave' como um inteiro.",
+      "question": "#include <stdio.h>\n\nint main() {\n    __?__ chave = 42;\n    printf(\"Chave usada: %d\\n\", chave);\n    return 0;\n}",
+      "answer": [
+        [
+          "int"
+        ]
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Executando o Exploit",
+      "text": "Um exploit precisa ser montado na ordem certa: incluir biblioteca, iniciar a funcao main e entao executar a acao. Ordene o codigo.",
+      "question": "1 - int main() {\n2 - }\n3 - printf(\"Exploit executado.\\n\");\n4 - #include <stdio.h>\n5 - return 0;",
+      "answer": [
+        [
+          "4,1,3,5,2"
+        ]
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Scanner de Rede",
+      "text": "Um scanner de rede simples deve testar portas ate 100. Qual condicao finaliza o loop 'for' corretamente, incluindo a porta 100?",
+      "question": "#include <stdio.h>\n\nint main() {\n    for (int porta = 1; __?__; porta++) {\n        // Simula o teste da porta\n    }\n    printf(\"Scan completo.\\n\");\n    return 0;\n}\n\nA) porta < 100\nB) porta > 100\nC) porta == 100\nD) porta <= 100",
+      "answer": [
+        [
+          "D"
+        ]
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Bypass de Login",
+      "text": "Para burlar um login, um hacker precisa fazer a condicao 'if' ser sempre verdadeira. Complete o espaco com um valor que C considera como verdadeiro.",
+      "question": "#include <stdio.h>\n\nint main() {\n    if (__?__) {\n        printf(\"Login efetuado com sucesso.\\n\");\n    }\n    return 0;\n}",
+      "answer": [
+        [
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Injetor de Codigo",
+      "text": "Um injetor de codigo basico precisa declarar a funcao main e em seguida retornar 0, indicando sucesso. Reordene as linhas. [ Utilize o formato de resposta 1,2,3,4... ]",
+      "question": "1 - return 0;\n2 - }\n3 - int main() {\n4 - // Codigo injetado aqui\n5 - #include <stdio.h>",
+      "answer": [
+        [
+          "5,3,4,1,2"
+        ]
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Tipo de Dado",
+      "text": "Um sniffer de rede capturou um valor de porta. Qual tipo de dado e mais apropriado para armazenar um numero inteiro como 443?",
+      "question": "#include <stdio.h>\n\nint main() {\n    __?__ porta = 443;\n    printf(\"Porta: %d\\n\", porta);\n    return 0;\n}\n\nA) float\nB) char\nC) int\nD) double",
+      "answer": [
+        [
+          "C"
+        ]
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Acesso a Area Restrita",
+      "text": "Para entrar numa area restrita, o nivel de acesso deve ser maior que 5. Complete a condicao 'if' para verificar isso.",
+      "question": "#include <stdio.h>\n\nint main() {\n    int nivel = 7;\n    if (nivel __?__ 5) {\n        printf(\"Acesso a area restrita permitido.\\n\");\n    }\n    return 0;\n}",
+      "answer": [
+        [
+          ">"
+        ]
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Montando a Ferramenta",
+      "text": "'Khamul' esta criando uma ferramenta. Ela precisa primeiro incluir a biblioteca, depois definir main, e entao declarar a variavel 'status'. Reordene. [ Utilize o formato de resposta 1,2,3,4... ]",
+      "question": "1 - int status = 1;\n2 - int main() {\n3 - }\n4 - return 0;\n5 - #include <stdio.h>",
+      "answer": [
+        [
+          "5,2,1,4,3"
+        ]
+      ]
+    },
+    {
+      "id": 21,
+      "title": "Incremento de Privilegios",
+      "text": "Um exploit precisa aumentar o nivel de privilegio de 0 para 1. Qual e a forma mais curta de incrementar a variavel 'privilegio' em 1?",
+      "question": "#include <stdio.h>\n\nint main() {\n    int privilegio = 0;\n    __?__;\n    printf(\"Novo privilegio: %d\\n\", privilegio);\n    return 0;\n}\n\nA) privilegio--\nB) privilegio++\nC) privilegio = 1\nD) privilegio + 1",
+      "answer": [
+        [
+          "B"
+        ]
+      ]
+    },
+    {
+      "id": 22,
+      "title": "Pacote Corrompido",
+      "text": "Um sistema so processa pacotes com tamanho menor ou igual a 1500 bytes. Complete o codigo para verificar esta condicao.",
+      "question": "#include <stdio.h>\n\nint main() {\n    int tamanho_pacote = 1200;\n    if (tamanho_pacote __?__ 1500) {\n        printf(\"Pacote valido.\\n\");\n    }\n    return 0;\n}",
+      "answer": [
+        [
+          "<="
+        ]
+      ]
+    },
+    {
+      "id": 23,
+      "title": "Decodificador de Caractere",
+      "text": "Um decodificador simples precisa ser montado. Ele deve declarar um 'char' e depois imprimi-lo. Organize as linhas de codigo.",
+      "question": "1 - }\n2 - printf(\"%c\", letra);\n3 - #include <stdio.h>\n4 - int main() {\n5 - char letra = 'A';",
+      "answer": [
+        [
+          "3,4,5,2,1"
+        ]
+      ]
+    },
+    {
+      "id": 24,
+      "title": "Quebra de Senha",
+      "text": "Um loop 'for' esta testando senhas de 4 digitos, de 1000 a 9999. Qual deve ser a condicao de parada para incluir o 9999?",
+      "question": "#include <stdio.h>\n\nint main() {\n    for (int senha = 1000; __?__; senha++) {\n        // Testa a senha\n    }\n    printf(\"Fim das tentativas.\\n\");\n    return 0;\n}\n\nA) senha < 9999\nB) senha <= 9999\nC) senha == 9999\nD) senha > 1000",
+      "answer": [
+        [
+          "B"
+        ]
+      ]
+    },
+    {
+      "id": 25,
+      "title": "Sinalizador de Atividade",
+      "text": "Um malware usa uma variavel 'ativo' para controlar seu estado. Para desativa-lo, 'ativo' deve ser definido como 0. Complete a atribuicao.",
+      "question": "#include <stdio.h>\n\nint main() {\n    int ativo = 1;\n    ativo = __?__;\n    printf(\"Malware inativo.\\n\");\n    return 0;\n}",
+      "answer": [
+        [
+          "0"
+        ]
+      ]
+    },
+    {
+      "id": 26,
+      "title": "Logger Simples",
+      "text": "Um hacker precisa de um logger que declare uma variavel e imprima seu valor. Reordene o codigo para funcionar. [ Utilize o formato de resposta 1,2,3,4... ]",
+      "question": "1 - int main() {\n2 - int valor = 100;\n3 - #include <stdio.h>\n4 - printf(\"Valor: %d\", valor);\n5 - }",
+      "answer": [
+        [
+          "3,1,2,4,5"
+        ]
+      ]
+    },
+    {
+      "id": 27,
+      "title": "Comando de Saida",
+      "text": "Todo programa em C bem-sucedido deve retornar um status. Qual comando indica que o programa terminou sem erros?",
+      "question": "#include <stdio.h>\n\nint main() {\n    printf(\"Executado.\\n\");\n    __?__;\n}\n\nA) end 0\nB) exit 0\nC) return 0\nD) break 0",
+      "answer": [
+        [
+          "C"
+        ]
+      ]
+    },
+    {
+      "id": 28,
+      "title": "Verificador de ID",
+      "text": "Um sistema de seguranca so permite acesso se o ID do agente for exatamente 7. Complete o codigo para realizar essa verificacao.",
+      "question": "#include <stdio.h>\n\nint main() {\n    int agenteID = 7;\n    if (agenteID __?__ 7) {\n        printf(\"Agente verificado.\\n\");\n    }\n    return 0;\n}",
+      "answer": [
+        [
+          "=="
+        ]
+      ]
+    },
+    {
+      "id": 29,
+      "title": "Script de Impressao",
+      "text": "Um script precisa imprimir a palavra 'HACKED'. Reordene as linhas para que o programa execute corretamente. [ Utilize o formato de resposta 1,2,3,4... ]",
+      "question": "1 - #include <stdio.h>\n2 - }\n3 - return 0;\n4 - int main() {\n5 - printf(\"HACKED\");",
+      "answer": [
+        [
+          "1,4,5,3,2"
+        ]
+      ]
+    },
+    {
+      "id": 30,
+      "title": "Loop de Vigilancia",
+      "text": "Um programa de vigilancia deve rodar exatamente 10 vezes. Complete o loop 'for' para que ele execute de i=0 ate i=9.",
+      "question": "#include <stdio.h>\n\nint main() {\n    for (int i = 0; __?__; i++) {\n        printf(\"Verificando...\\n\");\n    }\n    return 0;\n}\n\nA) i < 10\nB) i <= 10\nC) i > 10\nD) i == 9",
+      "answer": [
+        [
+          "A"
+        ]
+      ]
+    },
+    {
+      "id": 31,
+      "title": "Desativador de Alarme",
+      "text": "Para desativar um alarme, o status precisa ser 'false'. Complete o codigo para definir a variavel booleana 'alarmeOn' para 'false'.",
+      "question": "#include <stdbool.h>\n#include <stdio.h>\n\nint main() {\n    bool alarmeOn = true;\n    alarmeOn = __?__;\n    if (!alarmeOn) {\n        printf(\"Alarme desativado.\\n\");\n    }\n    return 0;\n}",
+      "answer": [
+        [
+          "false"
+        ]
+      ]
+    },
+    {
+      "id": 32,
+      "title": "Programa 'Ola Hacker'",
+      "text": "Um hacker iniciante quer criar um programa que diz 'Ola Hacker'. Reordene o codigo para que ele funcione. [ Utilize o formato de resposta 1,2,3,4... ]",
+      "question": "1 - }\n2 - return 0;\n3 - printf(\"Ola Hacker\");\n4 - #include <stdio.h>\n5 - int main() {",
+      "answer": [
+        [
+          "4,5,3,2,1"
+        ]
+      ]
+    },
+    {
+      "id": 33,
+      "title": "Formatador de Saida",
+      "text": "Um script precisa imprimir um numero inteiro armazenado na variavel 'codigo'. Qual especificador de formato e usado para inteiros em 'printf'?",
+      "question": "#include <stdio.h>\n\nint main() {\n    int codigo = 200;\n    printf(\"Status: __?__\", codigo);\n    return 0;\n}\n\nA) %f\nB) %c\nC) %s\nD) %d",
+      "answer": [
+        [
+          "D"
+        ]
+      ]
+    },
+    {
+      "id": 34,
+      "title": "Acesso por Nivel Minimo",
+      "text": "O acesso a um sistema requer nivel 3 ou superior. Complete a condicao 'if' para testar se 'nivel' e maior ou igual a 3.",
+      "question": "#include <stdio.h>\n\nint main() {\n    int nivel = 4;\n    if (nivel __?__ 3) {\n        printf(\"Acesso garantido.\\n\");\n    }\n    return 0;\n}",
+      "answer": [
+        [
+          ">="
+        ]
+      ]
+    },
+    {
+      "id": 35,
+      "title": "Declaracao de Variavel",
+      "text": "Um programa precisa armazenar um numero. Reordene as linhas para declarar a variavel 'num' e inicializa-la com o valor 10. [ Utilize o formato de resposta 1,2,3,4... ]",
+      "question": "1 - int num = 10;\n2 - #include <stdio.h>\n3 - }\n4 - return 0;\n5 - int main() {",
+      "answer": [
+        [
+          "2,5,1,4,3"
+        ]
+      ]
+    },
+    {
+      "id": 36,
+      "title": "Cabecalho Necessario",
+      "text": "Para usar a funcao 'printf', qual biblioteca precisa ser incluida no inicio do arquivo C?",
+      "question": "__?__\n\nint main() {\n    printf(\"Biblioteca incluida!\");\n    return 0;\n}\n\nA) #include <math.h>\nB) #include <string.h>\nC) #include <stdio.h>\nD) #include <stdlib.h>",
+      "answer": [
+        [
+          "C"
+        ]
+      ]
+    },
+    {
+      "id": 37,
+      "title": "Final de Bloco",
+      "text": "Em C, todo bloco de codigo, como a funcao 'main', precisa ser fechado. Complete com o caractere que finaliza o bloco da funcao 'main'.",
+      "question": "#include <stdio.h>\n\nint main() {\n    printf(\"Bloco de codigo\");\n    return 0;\n__?__",
+      "answer": [
+        [
+          "}"
+        ]
+      ]
+    },
+    {
+      "id": 38,
+      "title": "Funcao Principal",
+      "text": "Todo programa em C precisa de um ponto de entrada. Reordene as linhas para criar a estrutura basica da funcao principal 'main'. [ Utilize o formato de resposta 1,2,3,4... ]",
+      "question": "1 - return 0;\n2 - int main() {\n3 - }\n4 - // Ponto de entrada\n5 - #include <stdio.h>",
+      "answer": [
+        [
+          "5,2,4,1,3"
+        ]
+      ]
+    },
+    {
+      "id": 39,
+      "title": "Final de Instrucao",
+      "text": "Na linguagem C, a maioria das instrucoes deve terminar com um caractere especifico para indicar seu fim. Qual caractere e esse?",
+      "question": "#include <stdio.h>\n\nint main() {\n    int x = 5__?__\n    printf(\"%d\", x);\n    return 0;\n}\n\nA) .\nB) ,\nC) ;\nD) :",
+      "answer": [
+        [
+          "C"
+        ]
+      ]
+    },
+    {
+      "id": 40,
+      "title": "Acesso Negado",
+      "text": "Um script deve rodar apenas se a variavel 'bloqueado' for falsa ('false'). Complete a condicao 'if' para verificar se a variavel NAO e verdadeira.",
+      "question": "#include <stdbool.h>\n#include <stdio.h>\n\nint main() {\n    bool bloqueado = false;\n    if (__?__bloqueado) {\n        printf(\"Acesso liberado.\\n\");\n    }\n    return 0;\n}",
+      "answer": [
+        [
+          "!"
+        ]
+      ]
+    },
+    {
+      "id": 41,
+      "title": "Exibindo um Numero",
+      "text": "Um programa precisa exibir o numero 42 na tela. Reordene o codigo para que ele declare e imprima o numero. [ Utilize o formato de resposta 1,2,3,4... ]",
+      "question": "1 - printf(\"%d\", numero);\n2 - int numero = 42;\n3 - }\n4 - int main() {\n5 - #include <stdio.h>",
+      "answer": [
+        [
+          "5,4,2,1,3"
+        ]
+      ]
+    },
+    {
+      "id": 42,
+      "title": "Verificacao de Igualdade",
+      "text": "Um programa de autenticacao compara dois codigos. Qual operador e usado para verificar se 'codigo1' e 'codigo2' sao exatamente iguais?",
+      "question": "#include <stdio.h>\n\nint main() {\n    int codigo1 = 1337;\n    int codigo2 = 1337;\n    if (codigo1 __?__ codigo2) {\n        printf(\"Codigos conferem.\");\n    }\n    return 0;\n}\n\nA) =\nB) ==\nC) !=\nD) <>",
+      "answer": [
+        [
+          "B"
+        ]
+      ]
+    },
+    {
+      "id": 43,
+      "title": "Comentario Malicioso",
+      "text": "Um hacker quer deixar uma mensagem oculta no codigo que nao sera executada. Complete o comentario de linha unica.",
+      "question": "#include <stdio.h>\n\nint main() {\n    __?__ Hack the planet\n    return 0;\n}",
+      "answer": [
+        [
+          "//"
+        ]
+      ]
+    },
+    {
+      "id": 44,
+      "title": "Estrutura Basica",
+      "text": "Reordene as linhas para formar o programa 'Hello, World!' mais simples possivel em C. [ Utilize o formato de resposta 1,2,3,4... ]",
+      "question": "1 - printf(\"Hello, World!\");\n2 - }\n3 - #include <stdio.h>\n4 - int main() {\n5 - return 0;",
+      "answer": [
+        [
+          "3,4,1,5,2"
+        ]
+      ]
+    },
+    {
+      "id": 45,
+      "title": "Loop Decrescente",
+      "text": "Um script precisa contar de 5 ate 1. Complete a parte de atualizacao do loop 'for' para decrementar o contador 'i'.",
+      "question": "#include <stdio.h>\n\nint main() {\n    for (int i = 5; i > 0; __?__) {\n        printf(\"%d\\n\", i);\n    }\n    return 0;\n}\n\nA) i++\nB) i = i - 1\nC) i--\nD) i-",
+      "answer": [
+        [
+          "C"
+        ]
+      ]
+    },
+    {
+      "id": 46,
+      "title": "Definindo Ponto de Entrada",
+      "text": "A execucao de um programa C comeca em uma funcao especifica. Complete o nome dessa funcao principal.",
+      "question": "#include <stdio.h>\n\nint __?__() {\n    return 0;\n}",
+      "answer": [
+        [
+          "main"
+        ]
+      ]
+    },
+    {
+      "id": 47,
+      "title": "Variavel de Caractere",
+      "text": "Um programa precisa armazenar a inicial 'Z'. Reordene as linhas para declarar uma variavel do tipo 'char' e atribuir o valor a ela. [ Utilize o formato de resposta 1,2,3,4... ]",
+      "question": "1 - }\n2 - #include <stdio.h>\n3 - int main() {\n4 - return 0;\n5 - char inicial = 'Z';",
+      "answer": [
+        [
+          "2,3,5,4,1"
+        ]
+      ]
+    },
+    {
+      "id": 48,
+      "title": "Condicao de Parada",
+      "text": "Um loop 'while' deve parar quando a variavel 'continuar' se tornar 0. Qual condicao no 'while' faz o loop rodar enquanto 'continuar' for 1?",
+      "question": "#include <stdio.h>\n\nint main() {\n    int continuar = 1;\n    while (__?__) {\n        printf(\"Em execucao...\\n\");\n        continuar = 0;\n    }\n    return 0;\n}\n\nA) continuar == 0\nB) continuar\nC) !continuar\nD) continuar < 0",
+      "answer": [
+        [
+          "B"
+        ]
+      ]
+    },
+    {
+      "id": 49,
+      "title": "Impressao de Texto",
+      "text": "A funcao 'printf' e usada para exibir saida. Complete-a para imprimir a string 'Infectado'.",
+      "question": "#include <stdio.h>\n\nint main() {\n    printf(__?__);\n    return 0;\n}",
+      "answer": [
+        [
+          "(\"Infectado\")"
+        ]
+      ]
+    },
+    {
+      "id": 50,
+      "title": "Programa Vazio",
+      "text": "Um hacker quer criar um programa que compila mas nao faz nada. Reordene as linhas para criar um programa C minimo e vazio. [ Utilize o formato de resposta 1,2,3,4... ]",
+      "question": "1 - }\n2 - return 0;\n3 - #include <stdio.h>\n4 - int main() {\n5 - // Nenhuma acao",
+      "answer": [
+        [
+          "3,4,5,2,1"
+        ]
+      ]
+    },
+    {
+      "id": 51,
+      "title": "Rastreador de Conexoes",
+      "text": "Um sniffer precisa contar conexoes. A variavel 'conexoes' comeca em 0 e deve ser incrementada. Qual operacao faz isso de forma mais concisa?",
+      "question": "#include <stdio.h>\n\nint main() {\n    int conexoes = 0;\n    __?__;\n    printf(\"%d conexoes\", conexoes);\n    return 0;\n}\n\nA) conexoes = conexoes + 1\nB) conexoes++\nC) conexoes + 1\nD) conexoes = 1",
+      "answer": [
+        [
+          "B"
+        ]
+      ]
+    },
+    {
+      "id": 52,
+      "title": "Validador de Senha",
+      "text": "Um sistema so permite acesso se a senha NAO for igual a 0000. Complete a condicao para verificar se 'senha' e diferente de 0.",
+      "question": "#include <stdio.h>\n\nint main() {\n    int senha = 1234;\n    if (senha __?__ 0) {\n        printf(\"Senha valida.\\n\");\n    }\n    return 0;\n}",
+      "answer": [
+        [
+          "!="
+        ]
+      ]
+    },
+    {
+      "id": 53,
+      "title": "Script de Backdoor",
+      "text": "'Morpheus' precisa montar um backdoor basico. Reordene o codigo para criar um programa que imprime 'Backdoor ativo'. [ Utilize o formato de resposta 1,2,3,4... ]",
+      "question": "1 - return 0;\n2 - printf(\"Backdoor ativo\");\n3 - int main() {\n4 - #include <stdio.h>\n5 - }",
+      "answer": [
+        [
+          "4,3,2,1,5"
+        ]
+      ]
+    },
+    {
+      "id": 54,
+      "title": "Testador de Limites",
+      "text": "Um exploit testa valores ate 255. Complete o loop para que ele execute de 0 ate 255 (inclusive).",
+      "question": "#include <stdio.h>\n\nint main() {\n    for (int i = 0; __?__; i++) {\n        // Testa valor\n    }\n    return 0;\n}\n\nA) i < 255\nB) i <= 255\nC) i == 255\nD) i > 0",
+      "answer": [
+        [
+          "B"
+        ]
+      ]
+    },
+    {
+      "id": 55,
+      "title": "Flag de Execucao",
+      "text": "Um malware usa uma flag booleana para controlar sua execucao. Complete o codigo para declarar 'executando' como verdadeiro.",
+      "question": "#include <stdbool.h>\n\nint main() {\n    bool executando = __?__;\n    if (executando) {\n        printf(\"Sistema comprometido.\\n\");\n    }\n    return 0;\n}",
+      "answer": [
+        [
+          "true"
+        ]
+      ]
+    },
+    {
+      "id": 56,
+      "title": "Analisador de IP",
+      "text": "Um programa precisa armazenar o primeiro octeto de um IP (numero entre 0-255). Qual tipo de dado e apropriado?",
+      "question": "#include <stdio.h>\n\nint main() {\n    __?__ octeto = 192;\n    printf(\"Octeto: %d\", octeto);\n    return 0;\n}\n\nA) char\nB) int\nC) float\nD) bool",
+      "answer": [
+        [
+          "B"
+        ]
+      ]
+    },
+    {
+      "id": 57,
+      "title": "Keylogger Simples",
+      "text": "Um keylogger deve capturar uma tecla. Reordene para criar um programa que armazena e imprime o caractere 'K'. [ Utilize o formato de resposta 1,2,3,4... ]",
+      "question": "1 - printf(\"%c\", tecla);\n2 - #include <stdio.h>\n3 - }\n4 - char tecla = 'K';\n5 - int main() {",
+      "answer": [
+        [
+          "2,5,4,1,3"
+        ]
+      ]
+    },
+    {
+      "id": 58,
+      "title": "Protecao por Nivel",
+      "text": "Acesso e negado se o nivel for menor que 10. Complete a condicao 'if' para verificar isso.",
+      "question": "#include <stdio.h>\n\nint main() {\n    int nivel = 8;\n    if (nivel __?__ 10) {\n        printf(\"Acesso negado.\\n\");\n    }\n    return 0;\n}",
+      "answer": [
+        [
+          "<"
+        ]
+      ]
+    },
+    {
+      "id": 59,
+      "title": "Contador de Pacotes",
+      "text": "Um sniffer conta pacotes de 1 a 50. Qual condicao faz o loop parar apos processar o pacote 50?",
+      "question": "#include <stdio.h>\n\nint main() {\n    for (int pacote = 1; __?__; pacote++) {\n        printf(\"Pacote %d\\n\", pacote);\n    }\n    return 0;\n}\n\nA) pacote < 50\nB) pacote > 50\nC) pacote <= 50\nD) pacote != 50",
+      "answer": [
+        [
+          "C"
+        ]
+      ]
+    },
+    {
+      "id": 60,
+      "title": "Resetador de Sistema",
+      "text": "Para resetar um sistema, a variavel 'status' deve voltar a 0. Complete a atribuicao.",
+      "question": "#include <stdio.h>\n\nint main() {\n    int status = 99;\n    status = __?__;\n    printf(\"Sistema resetado.\\n\");\n    return 0;\n}",
+      "answer": [
+        [
+          "0"
+        ]
+      ]
+    },
+    {
+      "id": 61,
+      "title": "Exploit Ordenado",
+      "text": "Um exploit precisa seguir a ordem: incluir stdio, declarar main, executar payload. Reordene as linhas. [ Utilize o formato de resposta 1,2,3,4... ]",
+      "question": "1 - }\n2 - #include <stdio.h>\n3 - printf(\"Payload entregue\");\n4 - int main() {\n5 - return 0;",
+      "answer": [
+        [
+          "2,4,3,5,1"
+        ]
+      ]
+    },
+    {
+      "id": 62,
+      "title": "Impressao de Status",
+      "text": "Um script imprime um codigo de status inteiro. Qual especificador de formato deve ser usado em 'printf'?",
+      "question": "#include <stdio.h>\n\nint main() {\n    int status = 404;\n    printf(\"Status: __?__\", status);\n    return 0;\n}\n\nA) %s\nB) %d\nC) %c\nD) %f",
+      "answer": [
+        [
+          "B"
+        ]
+      ]
+    },
+    {
+      "id": 63,
+      "title": "Bypass de Seguranca",
+      "text": "Para burlar a seguranca, a condicao deve sempre ser falsa. Complete com um valor que C considera como falso.",
+      "question": "#include <stdio.h>\n\nint main() {\n    if (__?__) {\n        printf(\"Bloqueado\\n\");\n    } else {\n        printf(\"Bypass bem-sucedido\\n\");\n    }\n    return 0;\n}",
+      "answer": [
+        [
+          "0"
+        ]
+      ]
+    },
+    {
+      "id": 64,
+      "title": "Loop de Ataque",
+      "text": "Um DDoS precisa enviar requisicoes enquanto 'ativo' for verdadeiro (1). Complete a condicao do 'while'.",
+      "question": "#include <stdio.h>\n\nint main() {\n    int ativo = 1;\n    while (__?__) {\n        printf(\"Enviando requisicao...\\n\");\n        ativo = 0; // Para o ataque\n    }\n    return 0;\n}\n\nA) ativo == 0\nB) ativo != 1\nC) ativo == 1\nD) ativo < 1",
+      "answer": [
+        [
+          "C"
+        ]
+      ]
+    },
+    {
+      "id": 65,
+      "title": "Declaracao de Token",
+      "text": "Um token de acesso e um numero inteiro. Reordene para declarar e inicializar a variavel 'token' com valor 9876. [ Utilize o formato de resposta 1,2,3,4... ]",
+      "question": "1 - int token = 9876;\n2 - return 0;\n3 - int main() {\n4 - }\n5 - #include <stdio.h>",
+      "answer": [
+        [
+          "5,3,1,2,4"
+        ]
+      ]
+    },
+    {
+      "id": 66,
+      "title": "Finalizador de Processo",
+      "text": "Todo programa C deve indicar seu termino. Qual comando retorna o controle ao sistema operacional indicando sucesso?",
+      "question": "#include <stdio.h>\n\nint main() {\n    printf(\"Processo finalizado.\\n\");\n    __?__;\n}\n\nA) finish 0\nB) return 0\nC) exit()\nD) end",
+      "answer": [
+        [
+          "B"
+        ]
+      ]
+    },
+    {
+      "id": 67,
+      "title": "Verificador de Hash",
+      "text": "Um verificador compara dois hashes. Se forem exatamente iguais, o arquivo e autentico. Complete a verificacao.",
+      "question": "#include <stdio.h>\n\nint main() {\n    int hash1 = 12345;\n    int hash2 = 12345;\n    if (hash1 __?__ hash2) {\n        printf(\"Arquivo autentico.\\n\");\n    }\n    return 0;\n}",
+      "answer": [
+        [
+          "=="
+        ]
+      ]
+    },
+    {
+      "id": 68,
+      "title": "Scanner de Vulnerabilidades",
+      "text": "Um scanner testa de 1 a 1000. Complete para que o loop execute exatamente 1000 vezes.",
+      "question": "#include <stdio.h>\n\nint main() {\n    for (int i = 1; __?__; i++) {\n        // Verifica vulnerabilidade\n    }\n    printf(\"Scan concluido.\\n\");\n    return 0;\n}\n\nA) i < 1000\nB) i <= 1000\nC) i > 1000\nD) i == 1000",
+      "answer": [
+        [
+          "B"
+        ]
+      ]
+    },
+    {
+      "id": 69,
+      "title": "Ativador de Modo Stealth",
+      "text": "Para ativar o modo stealth, a variavel 'visivel' deve ser false. Complete a atribuicao.",
+      "question": "#include <stdbool.h>\n#include <stdio.h>\n\nint main() {\n    bool visivel = __?__;\n    if (!visivel) {\n        printf(\"Modo stealth ativado.\\n\");\n    }\n    return 0;\n}",
+      "answer": [
+        [
+          "false"
+        ]
+      ]
+    },
+    {
+      "id": 70,
+      "title": "Montador de Exploit",
+      "text": "Monte um exploit que declara uma variavel 'vulnerabilidade' e imprime seu valor. Reordene o codigo. [ Utilize o formato de resposta 1,2,3,4... ]",
+      "question": "1 - int vulnerabilidade = 1;\n2 - printf(\"%d\", vulnerabilidade);\n3 - }\n4 - #include <stdio.h>\n5 - int main() {",
+      "answer": [
+        [
+          "4,5,1,2,3"
+        ]
+      ]
+    },
+    {
+      "id": 71,
+      "title": "Decremento de Recursos",
+      "text": "Um script reduz os recursos do sistema. A variavel 'recursos' vale 10 e deve ser decrementada. Qual e a forma mais curta?",
+      "question": "#include <stdio.h>\n\nint main() {\n    int recursos = 10;\n    __?__;\n    printf(\"Recursos: %d\\n\", recursos);\n    return 0;\n}\n\nA) recursos = recursos - 1\nB) recursos--\nC) recursos - 1\nD) recursos = 9",
+      "answer": [
+        [
+          "B"
+        ]
+      ]
+    },
+    {
+      "id": 72,
+      "title": "Biblioteca de Entrada/Saida",
+      "text": "Para usar printf e outras funcoes de I/O, qual biblioteca deve ser incluida?",
+      "question": "__?__\n\nint main() {\n    printf(\"Sistema comprometido\");\n    return 0;\n}\n\nA) #include <stdlib.h>\nB) #include <stdio.h>\nC) #include <string.h>\nD) #include <math.h>",
+      "answer": [
+        [
+          "B"
+        ]
+      ]
+    },
+    {
+      "id": 73,
+      "title": "Negacao de Condicao",
+      "text": "Um sistema so executa se 'bloqueado' NAO for verdadeiro. Qual operador nega uma condicao booleana?",
+      "question": "#include <stdbool.h>\n#include <stdio.h>\n\nint main() {\n    bool bloqueado = false;\n    if (__?__bloqueado) {\n        printf(\"Executando...\\n\");\n    }\n    return 0;\n}",
+      "answer": [
+        [
+          "!"
+        ]
+      ]
+    },
+    {
+      "id": 74,
+      "title": "Inicializador de Ataque",
+      "text": "Reordene para criar um programa que declara uma variavel 'ataque' e a inicializa com 1. [ Utilize o formato de resposta 1,2,3,4... ]",
+      "question": "1 - }\n2 - int ataque = 1;\n3 - return 0;\n4 - #include <stdio.h>\n5 - int main() {",
+      "answer": [
+        [
+          "4,5,2,3,1"
+        ]
+      ]
+    },
+    {
+      "id": 75,
+      "title": "Comparador de Versoes",
+      "text": "Um exploit so funciona se a versao for maior que 2. Complete a condicao.",
+      "question": "#include <stdio.h>\n\nint main() {\n    int versao = 3;\n    if (versao __?__ 2) {\n        printf(\"Vulneravel!\\n\");\n    }\n    return 0;\n}",
+      "answer": [
+        [
+          ">"
+        ]
+      ]
+    },
+    {
+      "id": 76,
+      "title": "Caractere de Terminal",
+      "text": "Toda instrucao em C deve terminar com qual caractere?",
+      "question": "#include <stdio.h>\n\nint main() {\n    int x = 10__?__\n    return 0;\n}\n\nA) :\nB) .\nC) ;\nD) ,",
+      "answer": [
+        [
+          "C"
+        ]
+      ]
+    },
+    {
+      "id": 77,
+      "title": "Ferramenta de Injecao",
+      "text": "Reordene para montar uma ferramenta basica que imprime 'Injetando codigo...'. [ Utilize o formato de resposta 1,2,3,4... ]",
+      "question": "1 - printf(\"Injetando codigo...\");\n2 - }\n3 - #include <stdio.h>\n4 - return 0;\n5 - int main() {",
+      "answer": [
+        [
+          "3,5,1,4,2"
+        ]
+      ]
+    },
+    {
+      "id": 78,
+      "title": "Limitador de Tentativas",
+      "text": "Um sistema permite no maximo 3 tentativas. Complete para verificar se 'tentativas' nao excedeu 3.",
+      "question": "#include <stdio.h>\n\nint main() {\n    int tentativas = 2;\n    if (tentativas __?__ 3) {\n        printf(\"Tentativa permitida.\\n\");\n    }\n    return 0;\n}",
+      "answer": [
+        [
+          "<="
+        ]
+      ]
+    },
+    {
+      "id": 79,
+      "title": "Impressor de Codigo",
+      "text": "Complete a funcao printf para imprimir a palavra 'EXPLOITED'.",
+      "question": "#include <stdio.h>\n\nint main() {\n    printf(__?__);\n    return 0;\n}",
+      "answer": [
+        [
+          "(\"EXPLOITED\")"
+        ]
+      ]
+    },
+    {
+      "id": 80,
+      "title": "Fechamento de Funcao",
+      "text": "Complete o codigo com o caractere que fecha o bloco da funcao main.",
+      "question": "#include <stdio.h>\n\nint main() {\n    printf(\"Funcao finalizada\");\n    return 0;\n__?__",
+      "answer": [
+        [
+          "}"
+        ]
+      ]
+    },
+    {
+      "id": 81,
+      "title": "Loop de Brute Force",
+      "text": "Um ataque de forca bruta testa senhas de 0000 a 9999. Complete o loop para incluir 9999.",
+      "question": "#include <stdio.h>\n\nint main() {\n    for (int senha = 0; __?__; senha++) {\n        // Testa senha\n    }\n    return 0;\n}\n\nA) senha < 9999\nB) senha <= 9999\nC) senha > 0\nD) senha == 9999",
+      "answer": [
+        [
+          "B"
+        ]
+      ]
+    },
+    {
+      "id": 82,
+      "title": "Comentario de Desenvolvedor",
+      "text": "Um desenvolvedor quer deixar uma nota no codigo que nao sera compilada. Como criar um comentario de linha unica?",
+      "question": "#include <stdio.h>\n\nint main() {\n    __?__ Isto e um comentario\n    printf(\"Executado\");\n    return 0;\n}",
+      "answer": [
+        [
+          "//"
+        ]
+      ]
+    },
+    {
+      "id": 83,
+      "title": "Nome da Funcao Principal",
+      "text": "Complete o nome da funcao onde todo programa C inicia sua execucao.",
+      "question": "#include <stdio.h>\n\nint __?__() {\n    printf(\"Iniciado\");\n    return 0;\n}",
+      "answer": [
+        [
+          "main"
+        ]
+      ]
+    },
+    {
+      "id": 84,
+      "title": "Armazenador de Letra",
+      "text": "Reordene para criar um programa que declara um char 'inicial' com valor 'H' e o imprime. [ Utilize o formato de resposta 1,2,3,4... ]",
+      "question": "1 - return 0;\n2 - char inicial = 'H';\n3 - printf(\"%c\", inicial);\n4 - int main() {\n5 - #include <stdio.h>",
+      "answer": [
+        [
+          "5,4,2,3,1"
+        ]
+      ]
+    },
+    {
+      "id": 85,
+      "title": "Condicao de Loop Ativo",
+      "text": "Um loop deve continuar enquanto a variavel 'rodando' for diferente de zero. Qual condicao mantem o loop ativo?",
+      "question": "#include <stdio.h>\n\nint main() {\n    int rodando = 1;\n    while (__?__) {\n        printf(\"Loop ativo\\n\");\n        rodando = 0;\n    }\n    return 0;\n}\n\nA) rodando == 0\nB) rodando\nC) !rodando\nD) rodando < 0",
+      "answer": [
+        [
+          "B"
+        ]
+      ]
+    },
+    {
+      "id": 86,
+      "title": "Formatador de Caractere",
+      "text": "Para imprimir um unico caractere, qual especificador de formato deve ser usado?",
+      "question": "#include <stdio.h>\n\nint main() {\n    char letra = 'Z';\n    printf(\"Letra: __?__\", letra);\n    return 0;\n}\n\nA) %d\nB) %s\nC) %c\nD) %f",
+      "answer": [
+        [
+          "C"
+        ]
+      ]
+    },
+    {
+      "id": 87,
+      "title": "Programa Minimo",
+      "text": "Crie o menor programa C possivel que compila e executa. Reordene as linhas. [ Utilize o formato de resposta 1,2,3,4... ]",
+      "question": "1 - int main() {\n2 - }\n3 - return 0;\n4 - #include <stdio.h>",
+      "answer": [
+        [
+          "4,1,3,2"
+        ]
+      ]
+    },
+    {
+      "id": 88,
+      "title": "Tipo para Numeros",
+      "text": "Qual tipo de dado deve ser usado para armazenar numeros inteiros como 100, -50 ou 0?",
+      "question": "#include <stdio.h>\n\nint main() {\n    __?__ numero = 100;\n    printf(\"%d\", numero);\n    return 0;\n}\n\nA) float\nB) char\nC) int\nD) string",
+      "answer": [
+        [
+          "C"
+        ]
+      ]
+    },
+    {
+      "id": 89,
+      "title": "Atualizador de Loop",
+      "text": "Complete a parte de atualizacao do loop for para decrementar o contador.",
+      "question": "#include <stdio.h>\n\nint main() {\n    for (int i = 10; i > 0; __?__) {\n        printf(\"%d \", i);\n    }\n    return 0;\n}\n\nA) i++\nB) i--\nC) i + 1\nD) i = i + 1",
+      "answer": [
+        [
+          "B"
+        ]
+      ]
+    },
+    {
+      "id": 90,
+      "title": "Testador de Range",
+      "text": "Um teste de seguranca verifica se um valor esta dentro do limite. Complete para verificar se 'valor' e menor ou igual a 100.",
+      "question": "#include <stdio.h>\n\nint main() {\n    int valor = 75;\n    if (valor __?__ 100) {\n        printf(\"Dentro do limite.\\n\");\n    }\n    return 0;\n}",
+      "answer": [
+        [
+          "<="
+        ]
+      ]
+    },
+    {
+      "id": 91,
+      "title": "Hello Hacking",
+      "text": "Reordene para criar o classico 'Hello World' com tema hacker: 'Hello Hacking'. [ Utilize o formato de resposta 1,2,3,4... ]",
+      "question": "1 - }\n2 - printf(\"Hello Hacking\");\n3 - return 0;\n4 - int main() {\n5 - #include <stdio.h>",
+      "answer": [
+        [
+          "5,4,2,3,1"
+        ]
+      ]
+    },
+    {
+      "id": 92,
+      "title": "Inicializador de ID",
+      "text": "Reordene para criar um programa que declara 'id' com valor 555 e o imprime. [ Utilize o formato de resposta 1,2,3,4... ]",
+      "question": "1 - printf(\"ID: %d\", id);\n2 - #include <stdio.h>\n3 - int id = 555;\n4 - int main() {\n5 - }",
+      "answer": [
+        [
+          "2,4,3,1,5"
+        ]
+      ]
+    },
+    {
+      "id": 93,
+      "title": "Loop Exato",
+      "text": "Um processo deve executar exatamente 20 vezes. Complete o loop que inicia em 0.",
+      "question": "#include <stdio.h>\n\nint main() {\n    for (int i = 0; __?__; i++) {\n        // Executa processo\n    }\n    return 0;\n}\n\nA) i < 20\nB) i <= 20\nC) i > 20\nD) i == 19",
+      "answer": [
+        [
+          "A"
+        ]
+      ]
+    },
+    {
+      "id": 94,
+      "title": "Zerando Variavel",
+      "text": "Para zerar uma variavel de controle, atribua o valor correto.",
+      "question": "#include <stdio.h>\n\nint main() {\n    int contador = 50;\n    contador = __?__;\n    printf(\"Zerado: %d\\n\", contador);\n    return 0;\n}",
+      "answer": [
+        [
+          "0"
+        ]
+      ]
+    },
+    {
+      "id": 95,
+      "title": "Comparacao de Acesso",
+      "text": "Dois tokens devem ser comparados. Complete o operador de igualdade.",
+      "question": "#include <stdio.h>\n\nint main() {\n    int token1 = 777;\n    int token2 = 777;\n    if (token1 __?__ token2) {\n        printf(\"Tokens identicos.\\n\");\n    }\n    return 0;\n}",
+      "answer": [
+        [
+          "=="
+        ]
+      ]
+    },
+    {
+      "id": 96,
+      "title": "Estado Booleano",
+      "text": "Para desativar um recurso, defina a flag booleana 'ativo' como false.",
+      "question": "#include <stdbool.h>\n\nint main() {\n    bool ativo = __?__;\n    if (!ativo) {\n        printf(\"Recurso desativado.\\n\");\n    }\n    return 0;\n}",
+      "answer": [
+        [
+          "false"
+        ]
+      ]
+    },
+    {
+      "id": 97,
+      "title": "Estrutura Hello",
+      "text": "Monte a estrutura basica de um programa que imprime 'Hello'.",
+      "question": "1 - return 0;\n2 - printf(\"Hello\");\n3 - int main() {\n4 - }\n5 - #include <stdio.h>",
+      "answer": [
+        [
+          "5,3,2,1,4"
+        ]
+      ]
+    },
+    {
+      "id": 98,
+      "title": "Condicao de Acesso",
+      "text": "Acesso e permitido se o nivel for maior ou igual a 5. Complete a condicao.",
+      "question": "#include <stdio.h>\n\nint main() {\n    int nivel = 6;\n    if (nivel __?__ 5) {\n        printf(\"Acesso concedido.\\n\");\n    }\n    return 0;\n}",
+      "answer": [
+        [
+          ">="
+        ]
+      ]
+    },
+    {
+      "id": 99,
+      "title": "Declarador Simples",
+      "text": "Reordene para declarar uma variavel inteira 'valor' com o numero 999. [ Utilize o formato de resposta 1,2,3,4... ]",
+      "question": "1 - #include <stdio.h>\n2 - }\n3 - return 0;\n4 - int valor = 999;\n5 - int main() {",
+      "answer": [
+        [
+          "1,5,4,3,2"
+        ]
+      ]
+    },
+    {
+      "id": 100,
+      "title": "Finalizacao Perfeita",
+      "text": "Complete o programa para que ele compile e execute perfeitamente, imprimindo 'FIM' na tela.",
+      "question": "#include <stdio.h>\n\nint main() {\n    printf(\"FIM\");\n    __?__;\n}",
+      "answer": [
+        [
+          "return 0"
+        ]
+      ]
+    }
+  ]
+}

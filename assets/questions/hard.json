@@ -1,0 +1,578 @@
+{
+  "questoes": [
+    {
+      "id": 51,
+      "title": "Aritmetica de Ponteiro Simples [NIVEL MEDIO]",
+      "text": "Um algoritmo de criptografia precisa deslocar o **valor** apontado por um ponteiro. Complete a funcao 'deslocar_ptr' para que ela receba um ponteiro para um caractere e altere esse caractere para o seguinte na tabela ASCII.",
+      "question": "#include <stdio.h>\n\nvoid deslocar_ptr(char *c_ptr) {\n ??;\n}\n\nint main() {\n char c = 'A';\n deslocar_ptr(&c);\n printf(\"Caractere deslocado: %c\\n\", c);\n return 0;\n}",
+      "answer": [
+        [
+          "(*c_ptr)++"
+        ]
+      ]
+    },
+    {
+      "id": 52,
+      "title": "Declaracao e Inicializacao com Ponteiro [NIVEL MEDIO]",
+      "text": "Um exploit precisa inicializar uma variavel `alvo` em um endereco especifico. Reordene as linhas para declarar a variavel 'alvo', o ponteiro 'p_alvo', fazer 'p_alvo' apontar para 'alvo', atribuir um valor usando o ponteiro e depois imprimir o valor de 'alvo'. *( Utilize o formato 1,2,3,4[...] na resposta )*",
+      "question": "1 - int alvo;\n2 - printf(\"Alvo: %d\\n\", alvo);\n3 - int main() {\n4 - #include <stdio.h>\n5 - *p_alvo = 101;\n6 - int *p_alvo = &alvo;\n7 - }\n8 - return 0;",
+      "answer": [
+        [
+          "4,3,1,6,5,2,8,7"
+        ]
+      ]
+    },
+    {
+      "id": 53,
+      "title": "Bypass com Multiplas Condicoes [NIVEL MEDIO]",
+      "text": "Um sistema e desativado se o 'codigo' for 0 **OU** se a flag 'emergencia' for verdadeira **E** o 'nivel' for superior a 10. Qual alternativa representa o operador logico faltante completa a expressao?",
+      "question": "#include <stdio.h>\n#include <stdbool.h>\n\nint main() {\n int codigo = 5;\n bool emergencia = true;\n int nivel = 12;\n if (codigo == 0 || (emergencia ?? nivel > 10)) {\n printf(\"Bypass ativado.\\n\");\n }\n return 0;\n}\n\nA) &&\nB) OR\nC) !\nD) ||",
+      "answer": [
+        [
+          "A"
+        ]
+      ]
+    },
+    {
+      "id": 54,
+      "title": "Estrutura e Acesso com 'typedef' [NIVEL MEDIO]",
+      "text": "Um modulo de rastreamento de alvo usa uma 'struct' com 'typedef'. Complete o codigo para definir a estrutura `Coordenada` usando `typedef` e acessar o membro `latitude` usando o novo nome do tipo (`Coord`).",
+      "question": "#include <stdio.h>\n\n?? struct {\n float latitude;\n float longitude;\n} Coord;\n\nint main() {\n Coord c;\n c.?? = 40.7128;\n printf(\"Latitude: %f\\n\", c.latitude);\n return 0;\n}",
+      "answer": [
+        [
+          "typedef"
+        ],
+        [
+          "latitude"
+        ]
+      ]
+    },
+    {
+      "id": 55,
+      "title": "Leitura com Ponteiro em `scanf` [NIVEL MEDIO]",
+      "text": "Um keylogger precisa ler um ID de sessao. Reordene as linhas para declarar um inteiro, atribuir seu endereco a um ponteiro, e usar o **ponteiro** para ler a entrada no `scanf`. *( Utilize o formato 1,2,3,4[...] na resposta )*",
+      "question": "1 - printf(\"ID lido: %d\\n\", id);\n2 - int id;\n3 - scanf(\"%d\", p_id);\n4 - #include <stdio.h>\n5 - printf(\"Digite o ID: \");\n6 - int main() {\n7 - int *p_id = &id;\n8 - }",
+      "answer": [
+        [
+          "4,6,2,7,5,3,1,8"
+        ]
+      ]
+    },
+    {
+      "id": 56,
+      "title": "Acesso a Estrutura com Ponteiro [NIVEL MEDIO]",
+      "text": "Um modulo de autenticacao usa um ponteiro para a struct `Alvo`. Qual alternativa representa o operador e usado para acessar um membro de uma estrutura quando se tem um ponteiro para ela? E qual e o operador alternativo de 'dereferencia e acesso' (usado no comentario)?",
+      "question": "#include <stdio.h>\n\nstruct Alvo { int id; };\n\nint main() {\n struct Alvo a;\n struct Alvo *ptr = &a;\n \n // Metodo principal\n ptr??id = 99;\n \n // Metodo alternativo\n (*ptr).id = 100; // Valor final: 100\n \n printf(\"ID: %d\", a.id);\n return 0;\n}\n\nA) . e *\nB) -> e &\nC) -> e *\nD) & e ->",
+      "answer": [
+        [
+          "C"
+        ]
+      ]
+    },
+    {
+      "id": 57,
+      "title": "Contando Caracteres de um Buffer",
+      "text": "Um cracker precisa saber o comprimento de uma senha lida em um buffer para evitar um *buffer overflow*. Complete o codigo para usar a funcao 'strlen' da biblioteca 'string.h'.",
+      "question": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n char buffer[50];\n printf(\"Digite a senha: \");\n scanf(\"%s\", buffer);\n int comprimento = ??(??);\n printf(\"A senha tem %d caracteres.\\n\", comprimento);\n return 0;\n}",
+      "answer": [
+        [
+          "strlen"
+        ],
+        [
+          "buffer"
+        ]
+      ]
+    },
+    {
+      "id": 58,
+      "title": "Manipulacao de String (Sequencia) [NIVEL MEDIO]",
+      "text": "Um script de ataque está construindo um prefixo de comando. Reordene o código para declarar e inicializar a string `comando` com \"run\", alterar o primeiro caractere (índice 0) para 'D', e depois imprimir o resultado. *( Utilize o formato 1,2,3,4[...] na resposta )*",
+      "question": "1 - #include <stdio.h>\n2 - char comando[] = \"run\";\n3 - int main() {\n4 - comando[0] = 'D';\n5 - printf(\"%s\", comando);\n6 - return 0;\n7 - }",
+      "answer": [
+        [
+          "1,3,2,4,5,6,7"
+        ]
+      ]
+    },
+    {
+      "id": 59,
+      "title": "Comparacao de Strings Case Sensitive",
+      "text": "Um sistema de login basico nao valida a capitalizacao. A funcao 'strcmp' compara strings de forma **case sensitive**. Qual alternativa representa a saida deste programa?",
+      "question": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n char s1[] = \"Admin\";\n char s2[] = \"admin\";\n if (strcmp(s1, s2) == 0) {\n printf(\"Iguais\");\n } else {\n printf(\"Diferentes\");\n }\n return 0;\n}\n\nA) Iguais\nB) Diferentes\nC) 0\nD) O codigo nao compila",
+      "answer": [
+        [
+          "B"
+        ]
+      ]
+    },
+    {
+      "id": 60,
+      "title": "Ponteiro para Array em Funcao [NIVEL MEDIO]",
+      "text": "Um modulo de injecao de codigo precisa obter o endereco de um opcode especifico. Complete a funcao 'get_endereco' para retornar o endereco do **terceiro** elemento do array (indice 2).",
+      "question": "#include <stdio.h>\n\nint *get_endereco(int arr[]) {\n return &arr[??];\n}\n\nint main() {\n int alvo[] = {10, 20, 30, 40};\n int *ptr = get_endereco(alvo);\n printf(\"Valor: %d\\n\", *ptr);\n return 0;\n}",
+      "answer": [
+        [
+          "2"
+        ]
+      ]
+    },
+    {
+      "id": 61,
+      "title": "Escrita em Log Simples",
+      "text": "Um agente malicioso precisa registrar sua atividade sem apagar o log anterior. Reordene as linhas para abrir um arquivo de log em modo de anexacao ('a'), escrever a mensagem e fechar o arquivo. *( Utilize o formato 1,2,3,4[...] na resposta )*",
+      "question": "1 - #include <stdio.h>\n2 - int main() {\n3 - FILE *log = fopen(\"activity.log\", \"a\");\n4 - if (log != NULL) {\n5 - fprintf(log, \"Usuario logado.\\n\");\n6 - fclose(log);\n7 - } }",
+      "answer": [
+        [
+          "1,2,3,4,5,6,7"
+        ]
+      ]
+    },
+    {
+      "id": 62,
+      "title": "Lendo o Valor Apontado",
+      "text": "Um backdoor armazena o codigo de acesso na variavel `segredo`. Qual alternativa representa o operador de **dereferenciacao** deve ser usado para acessar o valor de `segredo` atraves de `ptr`?",
+      "question": "#include <stdio.h>\n\nint main() {\n int segredo = 42;\n int *ptr = &segredo;\n int valor_lido = ??ptr;\n printf(\"O segredo e %d\\n\", valor_lido);\n return 0;\n}\n\nA) &\nB) ->\nC) .\nD) *",
+      "answer": [
+        [
+          "D"
+        ]
+      ]
+    },
+    {
+      "id": 63,
+      "title": "Alocacao e Liberacao (Sequencia) [NIVEL MEDIO]",
+      "text": "Um payload precisa alocar dinamicamente um buffer para dados de exfiltracao e, em seguida, libera-lo. Reordene as linhas para alocar memoria para um array de 10 inteiros usando `malloc`, verificar se a alocacao foi bem-sucedida e, em seguida, liberar a memoria com `free`. *( Utilize o formato 1,2,3,4[...] na resposta )*",
+      "question": "1 - free(buffer);\n2 - int main() {\n3 - if (buffer != NULL) {\n4 - #include <stdlib.h>\n5 - int *buffer = (int*)malloc(10 * sizeof(int));\n6 - } \n7 - return 0; }",
+      "answer": [
+        [
+          "4,2,5,3,1,6,7"
+        ]
+      ]
+    },
+    {
+      "id": 64,
+      "title": "Percorrendo Matriz",
+      "text": "Um scanner de portas armazena o status de alvos em uma matriz. Reordene os loops aninhados para imprimir a matriz linha por linha. *( Utilize o formato 1,2,3,4[...] na resposta )*",
+      "question": "1 - int main() {\n2 - for (int j = 0; j < 2; j++) { printf(\"%d \", m[i][j]); }\n3 - int m[2][2] = {{5, 8}, {3, 2}};\n4 - for (int i = 0; i < 2; i++) {\n5 - #include <stdio.h>\n6 - }\n7 - return 0 }",
+      "answer": [
+        [
+          "5,1,3,4,2,6,7"
+        ]
+      ]
+    },
+    {
+      "id": 65,
+      "title": "Verificacao de Argumentos Minimos [NIVEL MEDIO]",
+      "text": "Um utilitario de rede requer o IP do host e a porta (2 argumentos). Qual alternativa tem a condicao que verifica se o numero minimo de argumentos necessarios foi fornecido, **incluindo** o nome do programa (`argv[0]`)?",
+      "question": "#include <stdio.h>\n\n// Executado como: ./programa 127.0.0.1 8080\nint main(int argc, char *argv[]) {\n if (??) {\n printf(\"IP: %s, Porta: %s\\n\", argv[1], argv[2]);\n } else {\n printf(\"Erro: Forneca IP e Porta.\\n\");\n }\n return 0;\n}\n\nA) argc == 2\nB) argc >= 3\nC) argc > 1\nD) argv[2] != NULL",
+      "answer": [
+        [
+          "B"
+        ]
+      ]
+    },
+    {
+      "id": 66,
+      "title": "Troca de Chaves por Referencia [NIVEL MEDIO]",
+      "text": "Um modulo de controle de acesso precisa trocar as chaves de criptografia para bypass. Complete a funcao 'swap' para que ela receba **ponteiros** para duas chaves e efetue a troca dos valores originais.",
+      "question": "#include <stdio.h>\n\nvoid swap(int *a, int *b) {\n int temp = ??;\n *a = *b;\n *b = ??;\n}\n\nint main() {\n int chaveA = 123, chaveB = 987;\n swap(&chaveA, &chaveB);\n printf(\"A=%d, B=%d\\n\", chaveA, chaveB);\n return 0;\n}",
+      "answer": [
+        [
+          "*a"
+        ],
+        [
+          "temp"
+        ]
+      ]
+    },
+    {
+      "id": 67,
+      "title": "Funcao Recursiva Fatorial [DIFICIL]",
+      "text": "Um algoritmo criptografico desatualizado usa o fatorial para gerar sementes. Reordene as linhas para criar uma funcao fatorial recursiva, incluindo o caso base e a chamada recursiva. *( Utilize o formato 1,2,3,4[...] na resposta )*",
+      "question": "1 - return 1; // Caso base\n2 - #include <stdio.h>\n3 - int fatorial(int n) {\n4 - } }\n5 - return n * fatorial(n - 1);\n6 - int main() { printf(\"%d\", fatorial(4)); }\n7 - if (n <= 1) {\n8 - } else {",
+      "answer": [
+        [
+          "2,3,7,1,8,5,4,6"
+        ]
+      ]
+    },
+    {
+      "id": 68,
+      "title": "Aritmetica de Ponteiros (Subtracao) [NIVEL MEDIO]",
+      "text": "Um modulo de deteccao de intrusao calcula a distancia entre dois enderecos de memoria (dois ponteiros). Subtrair dois ponteiros do mesmo tipo retorna a **distancia em unidades de elementos**. Qual alternativa representa o resultado de `ptr_fim - ptr_inicio`?",
+      "question": "#include <stdio.h>\n\nint main() {\n int array[] = {10, 20, 30, 40};\n int *ptr_inicio = &array[0];\n int *ptr_fim = &array[3];\n long diff = ptr_fim - ptr_inicio;\n printf(\"Diferenca: %ld\\n\", diff);\n return 0;\n}\n\nA) 3\nB) 4\nC) 12\nD) 16",
+      "answer": [
+        [
+          "A"
+        ]
+      ]
+    },
+    {
+      "id": 69,
+      "title": "Verificacao de Nao Igualdade (Multipla)",
+      "text": "Um malware precisa garantir que nao esta injetando codigo em processos essenciais do sistema. Complete a condicao que verifica se o processo **nao e** 'explorer.exe' **E nao e** 'svchost.exe' (ou seja, se o resultado de `strcmp` e diferente de 0 em ambos os casos).",
+      "question": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n char processo[] = \"my_malware.exe\";\n int res1 = strcmp(processo, \"explorer.exe\");\n int res2 = strcmp(processo, \"svchost.exe\");\n\n if (res1 ?? 0 ?? res2 ?? 0) {\n printf(\"Alvo valido. Atacando.\\n\");\n }\n return 0;\n}",
+      "answer": [
+        [
+          "!="
+        ],
+        [
+          "&&"
+        ],
+        [
+          "!="
+        ]
+      ]
+    },
+    {
+      "id": 70,
+      "title": "Macro para Constante",
+      "text": "Um backdoor define sua versao como uma macro. Reordene as linhas para definir a macro 'VERSAO' e usa-la no codigo. *( Utilize o formato 1,2,3,4[...] na resposta )*",
+      "question": "1 - int main() {\n2 - printf(\"Backdoor versao %f\\n\", VERSAO);\n3 - return 0;\n4 - }\n5 - #include <stdio.h>\n6 - #define VERSAO 1.2\n7 - // Inicio do programa",
+      "answer": [
+        [
+          "5,6,7,1,2,3,4"
+        ]
+      ]
+    },
+    {
+      "id": 71,
+      "title": "Prototipo de Funcao",
+      "text": "O modulo de comunicacao do rootkit tem uma funcao 'conectar'. Qual alternativa representa o prototipo correto para a funcao 'conectar' que retorna `void` e aceita um `int`?",
+      "question": "#include <stdio.h>\n\n??;\n\nint main() {\n conectar(8080);\n return 0;\n}\n\nvoid conectar(int porta) {\n printf(\"Conectando a porta %d\\n\", porta);\n}\n\nA) void conectar(int porta)\nB) conectar(int);\nC) void conectar(int);\nD) function conectar(int porta);",
+      "answer": [
+        [
+          "C"
+        ]
+      ]
+    },
+    {
+      "id": 72,
+      "title": "Ponteiro para o Inicio do Array",
+      "text": "Um carregador de payload precisa apontar para o inicio do `shellcode`. Qual alternativa tem as atribuicoes e sintaticamente incorreta ou incorreta em termos de tipo para fazer `ptr` apontar para o inicio de `shellcode`?",
+      "question": "#include <stdio.h>\n\nint main() {\n char shellcode[] = {0x90, 0x90, 0xCC};\n char* ptr;\n // Qual destas atribuicoes esta ERRADA?\n // A) ptr = shellcode;\n // B) ptr = &shellcode;\n // C) ptr = &shellcode[0];\n return 0;\n}\n\nA) A\nB) B\nC) C\nD) Nenhuma, todas funcionam",
+      "answer": [
+        [
+          "B"
+        ]
+      ]
+    },
+    {
+      "id": 73,
+      "title": "Loop e Controle de Fluxo (Continue/Break) [NIVEL MEDIO]",
+      "text": "Um scanner de portas esta testando uma faixa. Reordene as linhas para que o loop pule a iteracao em 22 (`continue`) e pare em 8080 (`break`). *( Utilize o formato 1,2,3,4[...] na resposta )*",
+      "question": "1 - if (porta == 8080) { break; }\n2 - for (int porta = 20; porta < 8085; porta++) {\n3 - int main() {\n4 - printf(\"Testando porta %d\\n\", porta);\n5 - if (porta == 22) { continue; }\n6 - #include <stdio.h>\n7 - } }",
+      "answer": [
+        [
+          "6,3,2,5,1,4,7"
+        ]
+      ]
+    },
+    {
+      "id": 74,
+      "title": "Retorno de Expressao Condicional (Ternario) [NIVEL MEDIO]",
+      "text": "Um modulo de autenticacao simplificado verifica se o `id` e 0 (Admin). Qual alternativa reescreve a funcao usando o operador **ternario** para retornar `true` se `id` for 0, e `false` caso contrario.",
+      "question": "#include <stdbool.h>\n\nbool eh_admin(int id) {\n return id == 0 ?? ?? ?? ??;\n}\n\nint main() {\n // O que eh_admin(0) retorna?\n}\n\nA) true, :, false\nB) 1, :, 0\nC) ? , true, : , false\nD) ? , 1, : , 0",
+      "answer": [
+        [
+          "C"
+        ]
+      ]
+    },
+    {
+      "id": 75,
+      "title": "Acesso a Array Multidimensional",
+      "text": "Um modulo de exploracao armazena coordenadas de alvos em uma matriz. Complete o codigo para acessar o elemento na linha 1, coluna 2 (valor 6).",
+      "question": "#include <stdio.h>\n\nint main() {\n int mapa[2][3] = {{1, 2, 3}, {4, 5, 6}};\n int valor = mapa[??][??];\n printf(\"Valor: %d\\n\", valor);\n return 0;\n}",
+      "answer": [
+        [
+          "1"
+        ],
+        [
+          "2"
+        ]
+      ]
+    },
+    {
+      "id": 76,
+      "title": "Declaracao e Impressao de Float [NIVEL MEDIO]",
+      "text": "Um programa malicioso precisa configurar um valor de ponto flutuante. Reordene as linhas para declarar uma variável `taxa` (float), atribuir um valor a ela, e imprimir esse valor usando `printf`. *( Utilize o formato 1,2,3,4[...] na resposta )*",
+      "question": "1 - int main() {\n2 - float taxa;\n3 - #include <stdio.h>\n4 - taxa = 0.99;\n5 - printf(\"Taxa: %f\", taxa);\n6 - return 0;\n7 - }",
+      "answer": [
+        [
+          "3,1,2,4,5,6,7"
+        ]
+      ]
+    },
+    {
+      "id": 77,
+      "title": "Switch e Fallthrough [NIVEL MEDIO]",
+      "text": "O modulo de comando e controle processa o comando 1, que, devido a um erro de *fallthrough* (falta de `break`), executa tambem o comando 2. Qual alternativa representa o que acontece se o comando **1** for recebido?",
+      "question": "#include <stdio.h>\n\nvoid processar(int cmd) {\n switch(cmd) {\n case 1: printf(\"Executar\");\n case 2: printf(\"Parar\"); break;\n case 3: printf(\"Reiniciar\"); break;\n default: printf(\"Comando invalido\"); break;\n }\n}\nint main() { processar(1); }\n\nA) Imprime 'ExecutarParar'.\nB) Imprime 'Parar'.\nC) Imprime 'Executar'.\nD) Imprime 'Comando invalido'.",
+      "answer": [
+        [
+          "A"
+        ]
+      ]
+    },
+    {
+      "id": 78,
+      "title": "Passagem por Referencia (Alteracao de Valor) [NIVEL MEDIO]",
+      "text": "Um exploit precisa resetar um contador de falhas no sistema para 0. Complete a funcao `resetar` para que ela receba um ponteiro e altere o valor original da variavel em `main` para 0.",
+      "question": "#include <stdio.h>\n\nvoid resetar(int ?? contador_ptr) {\n ??contador_ptr = 0;\n}\n\nint main() {\n int contador = 10;\n resetar(&contador);\n printf(\"Contador: %d\\n\", contador);\n return 0;\n}",
+      "answer": [
+        [
+          "*"
+        ],
+        [
+          "*"
+        ]
+      ]
+    },
+    {
+      "id": 79,
+      "title": "sizeof para Alocacao",
+      "text": "O alocador de memoria de um payload precisa calcular o espaco exato para uma estrutura de dados de alvo. Reordene as linhas para usar 'sizeof' com 'malloc' para alocar memoria para uma estrutura `Alvo`. *( Utilize o formato 1,2,3,4[...] na resposta )*",
+      "question": "1 - struct Alvo *ptr = malloc(sizeof(struct Alvo));\n2 - #include <stdlib.h>\n3 - struct Alvo { int id; };\n4 - if (ptr != NULL) { free(ptr); }\n5 - int main() {\n6 - #include <stdio.h>\n7 - }",
+      "answer": [
+        [
+          "6,2,3,5,1,4,7"
+        ]
+      ]
+    },
+    {
+      "id": 80,
+      "title": "Loop `do-while`",
+      "text": "Um gerador de senhas bruteforce precisa garantir que ele tente a primeira combinacao de senha. Qual e a alternativa que contem a palavra-chave que inicia um loop que garante que o codigo rode **pelo menos uma vez** antes de checar a condicao?",
+      "question": "#include <stdio.h>\n\nint main() {\n int i = 0;\n ?? {\n printf(\"Tentativa %d\\n\", i);\n i++;\n } while (i < 0);\n return 0;\n}\n\nA) for\nB) while\nC) do\nD) goto",
+      "answer": [
+        [
+          "C"
+        ]
+      ]
+    },
+    {
+      "id": 81,
+      "title": "Verificacao de Ponteiro Nulo Simplificada [NIVEL MEDIO]",
+      "text": "Um leitor de configuracao deve abortar se o arquivo nao for encontrado. Qual alternativa completa o 'if' para verificar se o ponteiro `f` e **nulo**, usando a sintaxe simplificada de C (onde `NULL` e interpretado como 0)?",
+      "question": "#include <stdio.h>\n#include <stdlib.h>\n\nint main() {\n FILE *f = fopen(\"nao_existe.txt\", \"r\");\n if (??) {\n printf(\"Falha ao abrir o arquivo!\\n\");\n exit(1);\n }\n return 0;\n}\n\nA) f != 0\nB) f == 0\nC) f\nD) !f",
+      "answer": [
+        [
+          "D"
+        ]
+      ]
+    },
+    {
+      "id": 82,
+      "title": "Array de Strings e Loop [NIVEL MEDIO]",
+      "text": "Um shell de comando customizado armazena os comandos validos em um array. Reordene as linhas para declarar um array de strings e **percorrer** todos os 3 elementos no loop `for`. *( Utilize o formato 1,2,3,4[...] na resposta )*",
+      "question": "1 - char *comandos[] = {\"start\", \"stop\", \"restart\"};\n2 - int main() {\n3 - for (int i = 0; i < 3; i++) { printf(\"%s\\n\", comandos[i]); }\n4 - #include <stdio.h>\n5 - }\n6 - return 0;\n7 - // Loop de comandos",
+      "answer": [
+        [
+          "4,2,1,7,3,6,5"
+        ]
+      ]
+    },
+    {
+      "id": 83,
+      "title": "Ordem de Precedencia (Casting) [NIVEL MEDIO]",
+      "text": "Um modulo de divisao de dados esta calculando a media de pacotes. Qual alternativa representa o que sera o valor de `media` neste codigo? (Atencao a ordem das operacoes e ao casting de inteiro para float).",
+      "question": "#include <stdio.h>\n\nint main() {\n int soma = 10;\n int total = 4;\n float media = (float)(soma / total);\n printf(\"Media: %f\\n\", media);\n return 0;\n}\n\nA) 2.500000\nB) 2.000000\nC) 0.000000\nD) O codigo nao compila",
+      "answer": [
+        [
+          "B"
+        ]
+      ]
+    },
+    {
+      "id": 84,
+      "title": "Loop Infinito (Idiomatico) [NIVEL MEDIO]",
+      "text": "Um listener de conexao para um backdoor deve rodar para sempre. Complete o loop `for` de maneira **idiomatica** para que ele nunca termine (loop infinito).",
+      "question": "#include <stdio.h>\n\nint main() {\n for (??) {\n printf(\"Esperando conexao...\\n\");\n break; // Apenas para o exemplo nao rodar para sempre\n }\n return 0;\n}",
+      "answer": [
+        [
+          ";;"
+        ]
+      ]
+    },
+    {
+      "id": 85,
+      "title": "Leitura de Linha Completa com `fgets` [NIVEL MEDIO]",
+      "text": "Um script precisa ler um arquivo de configuracao linha por linha, incluindo espacos em branco. Reordene as linhas para usar **`fgets`** para ler linhas do arquivo ate o fim (`NULL`) e imprimi-las. *( Utilize o formato 1,2,3,4[...] na resposta )*",
+      "question": "1 - int main() {\n2 - while (fgets(buffer, 100, fp) != NULL) { printf(\"%s\", buffer); }\n3 - #include <stdio.h>\n4 - FILE *fp = fopen(\"data.txt\", \"r\");\n5 - char buffer[100];\n6 - fclose(fp);\n7 - }",
+      "answer": [
+        [
+          "3,1,4,5,2,6,7"
+        ]
+      ]
+    },
+    {
+      "id": 86,
+      "title": "Variavel Estatica (Contagem) [NIVEL MEDIO]",
+      "text": "Um sistema de alarme tem uma funcao `trigger` que conta quantas vezes foi chamada. Uma variavel estatica em uma funcao mantem seu valor entre chamadas. Qual alternativa representa o que sera a saida do programa?",
+      "question": "#include <stdio.h>\n\nvoid trigger(int val) {\n static int chamadas = 0;\n chamadas += val;\n printf(\"%d \", chamadas);\n}\n\nint main() { trigger(1); trigger(2); trigger(3); return 0; }\n\nA) 1 1 1\nB) 1 3 6\nC) 1 2 3\nD) 0 1 2",
+      "answer": [
+        [
+          "B"
+        ]
+      ]
+    },
+    {
+      "id": 87,
+      "title": "Operador Ternario",
+      "text": "Um script de monitoramento precisa exibir o status do servidor. Complete a expressao para que `msg` seja \"Ativo\" se `online` for true, e \"Inativo\" caso contrario.",
+      "question": "#include <stdio.h>\n#include <stdbool.h>\n\nint main() {\n bool online = false;\n char *msg = online ?? \"Ativo\" ?? \"Inativo\";\n printf(\"Status: %s\\n\", msg);\n return 0;\n}",
+      "answer": [
+        [
+          "?"
+        ],
+        [
+          ":"
+        ]
+      ]
+    },
+    {
+      "id": 88,
+      "title": "Ponteiro para Ponteiro (Declaracao) [DIFICIL]",
+      "text": "Um alocador de memoria customizado trabalha com ponteiros para gerenciar listas de ponteiros. Qual alternativa representa a declaracao correta para `p_ptr`, um ponteiro que aponta para um ponteiro de inteiro (`int *`)?",
+      "question": "#include <stdio.h>\n\nint main() {\n int alvo = 10;\n int *ptr = &alvo;\n ?? p_ptr = &ptr; // Ponteiro para Ponteiro\n printf(\"Valor apontado: %d\\n\", **p_ptr);\n return 0;\n}\n\nA) int *p_ptr\nB) int **p_ptr\nC) int p_ptr\nD) int ***p_ptr",
+      "answer": [
+        [
+          "B"
+        ]
+      ]
+    },
+    {
+      "id": 89,
+      "title": "Escopo de Variavel (`extern`) [NIVEL MEDIO]",
+      "text": "Um exploit modular precisa acessar uma chave de criptografia **global** definida em um modulo de inicializacao separado. Para usar uma variavel **global** que esta definida em **outro arquivo** (`vars.c`), qual alternativa representa a palavra-chave que deve ser usada para declara-la neste arquivo (`main.c`)?",
+      "question": "// Arquivo 'main.c'\n#include <stdio.h>\n\n?? int CHAVE_GLOBAL; // Declaracao\n\nint main() {\n return 0;\n}\n\nA) static\nB) register\nC) volatile\nD) extern",
+      "answer": [
+        [
+          "D"
+        ]
+      ]
+    },
+    {
+      "id": 90,
+      "title": "sizeof(struct) e Padding [DIFICIL]",
+      "text": "Ao tentar injetar uma estrutura de `Payload` na memoria, o hacker precisa saber o tamanho exato da struct, incluindo o alinhamento. Qual alternativa representa o tamanho (em bytes) da struct `Payload` em um sistema de 64 bits (alinhamento padrao de 4 ou 8)? (O compilador alinha o `int` em 4 e o total em 4 ou 8)?",
+      "question": "#include <stdio.h>\n\nstruct Payload {\n char a;\n int b;\n char c;\n};\n\nint main() {\n // T1: Tamanho sem padding (1+4+1 = 6)\n // T2: Tamanho real devido ao alinhamento\n printf(\"%lu\", sizeof(struct Payload));\n return 0;\n}\n\nA) 6\nB) 8\nC) 12\nD) 16",
+      "answer": [
+        [
+          "C"
+        ]
+      ]
+    },
+    {
+      "id": 91,
+      "title": "Acessando Array com Ponteiro (Notacao de Array)",
+      "text": "Um cracker esta analisando um array de dados de sessao usando um ponteiro. Complete o codigo para que ele imprima o valor 30, **usando notacao de array (`[index]`)** com o ponteiro.",
+      "question": "#include <stdio.h>\n\nint main() {\n int dados[] = {10, 20, 30, 40};\n int *ptr = dados;\n printf(\"Valor: %d\\n\", ptr[??]);\n return 0;\n}",
+      "answer": [
+        [
+          "2"
+        ]
+      ]
+    },
+    {
+      "id": 92,
+      "title": "Inclusao Condicional (Header Guards) [NIVEL MEDIO]",
+      "text": "O modulo de hash evita definicoes multiplas de suas funcoes. Qual e a alternativa com a diretiva do pre-processador que inicia um 'header guard' para evitar inclusoes multiplas do mesmo arquivo de cabecalho?",
+      "question": "// Arquivo: hash.h\n?? HASH_H\n#define HASH_H\n\nint calcular_hash(int n);\n\n#endif\n\nA) #IFNDEF\nB) #IF NOT DEF\nC) #ifndef\nD) #guard",
+      "answer": [
+        [
+          "C"
+        ]
+      ]
+    },
+    {
+      "id": 93,
+      "title": "Enum com Valores Explicitos [NIVEL MEDIO]",
+      "text": "Um programa de rede usa constantes de status baseadas em HTTP. Qual alternativa representa o valor do estado `ERRO_CLIENTE`? (Se nao for atribuido, o `enum` continua a partir do valor anterior).",
+      "question": "#include <stdio.h>\n\nenum Estado { OCIOSO = 200, ATACANDO = 401, ERRO_CLIENTE };\n\nint main() {\n enum Estado atual = ERRO_CLIENTE;\n printf(\"Status: %d\", atual);\n return 0;\n}\n\nA) 200\nB) 401\nC) 402\nD) 0",
+      "answer": [
+        [
+          "C"
+        ]
+      ]
+    },
+    {
+      "id": 94,
+      "title": "Incremento de Ponteiro (Pos-incremento)",
+      "text": "Um loop esta iterando sobre uma string para extrair informacoes de login. Complete o codigo para que o ponteiro `ptr` avance para o proximo caractere no loop, usando a sintaxe de **pos-incremento** no acesso ao valor.",
+      "question": "#include <stdio.h>\n\nint main() {\n char msg[] = \"root\";\n char *ptr = msg;\n while (*ptr != '\\0') {\n printf(\"%c-\", ??);\n }\n return 0;\n}",
+      "answer": [
+        [
+          "ptr++"
+        ]
+      ]
+    },
+    {
+      "id": 95,
+      "title": "Copia Segura de String (Funcao)",
+      "text": "Para evitar um *buffer overflow* ao copiar um nome de arquivo potencialmente longo, qual alternativa tem a funcao e considerada a mais segura para copia de strings em buffers de tamanho fixo em C, pois permite especificar o tamanho maximo a ser copiado?",
+      "question": "#include <string.h>\n\nint main() {\n char destino[10];\n char origem[] = \"stringmuitolonga\";\n ??(destino, origem, sizeof(destino) - 1);\n destino[sizeof(destino) - 1] = '\\0';\n return 0;\n}\n\nA) strcpy\nB) strncopy\nC) strncpy\nD) memcpy",
+      "answer": [
+        [
+          "C"
+        ]
+      ]
+    },
+    {
+      "id": 96,
+      "title": "Funcao de Saida vs Return [NIVEL MEDIO]",
+      "text": "Qual alternativa representa a principal diferenca entre usar `return 1` na funcao `main` e `exit(1)` em qualquer funcao?",
+      "question": "#include <stdio.h>\n#include <stdlib.h>\n\nint falha_conexao() {\n printf(\"Erro de conexao.\");\n exit(1); // Termina com status de erro\n}\n\nint main() { falha_conexao(); return 0; }\n\nA) `exit(1)` encerra apenas a funcao atual; `return 1` encerra o programa.\nB) `exit(1)` encerra o programa imediatamente e chama rotinas de limpeza; `return 1` so funciona em `main`.\nC) Nao ha diferenca; ambos sao sinonimos.\nD) `exit(1)` so e usado para sucesso, `return 1` para erro.",
+      "answer": [
+        [
+          "B"
+        ]
+      ]
+    },
+    {
+      "id": 97,
+      "title": "Operacao Bitwise OR",
+      "text": "Um script de elevacao de privilegios precisa **adicionar** a permissao de 'escrita' (valor 2) as `permissoes` de um arquivo sem apagar as existentes. Complete a operacao bitwise OR.",
+      "question": "#include <stdio.h>\n\nint main() {\n int permissoes = 5; // Leitura(4) + Execucao(1)\n int mascara_escrita = 2;\n permissoes ??= mascara_escrita; \n printf(\"Novas Permissoes: %d\\n\", permissoes);\n return 0;\n}",
+      "answer": [
+        [
+          "|"
+        ]
+      ]
+    },
+    {
+      "id": 98,
+      "title": "Funcao que Retorna Ponteiro (`strchr`) [NIVEL MEDIO]",
+      "text": "Um parser de linha de comando precisa localizar o primeiro delimitador (caractere `c`). Qual alternativa tem a funcao da `string.h` que retorna um ponteiro para a primeira ocorrencia de um caractere em uma string?",
+      "question": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n char *s = \"abcde\";\n char c = 'c';\n char *p = ??(s, c);\n \n if (p) {\n printf(\"Caractere encontrado: %c\\n\", *p);\n }\n return 0;\n}\n\nA) strchr\nB) strstr\nC) strcmp\nD) findchar",
+      "answer": [
+        [
+          "A"
+        ]
+      ]
+    },
+    {
+      "id": 99,
+      "title": "Operacao Bitwise SHIFT (Aritmetica) [DIFICIL]",
+      "text": "Um algoritmo de hash simples usa *bit shifting* para embaralhar dados. Qual alternativa representa o valor final de `dado`? (Shift a esquerda multiplica por 2, shift a direita divide por 4).",
+      "question": "#include <stdio.h>\n\nint main() {\n unsigned int dado = 10;\n \n dado = dado << 1; \n dado = dado >> 2; \n \n printf(\"Valor final: %u\", dado);\n return 0;\n}\n\nA) 20\nB) 10\nC) 5\nD) 2",
+      "answer": [
+        [
+          "C"
+        ]
+      ]
+    },
+    {
+      "id": 100,
+      "title": "Definindo o Tipo de Retorno (Ponteiro para Funcao) [DIFICIL]",
+      "text": "Um vetor de ataque armazena ponteiros para diferentes funcoes de payload (por exemplo, `get_status`). Qual alternativa representa a declaracao correta para o **ponteiro de funcao** `funcao_ptr` que aponta para uma funcao que retorna um `int` e aceita um `int`?",
+      "question": "#include <stdio.h>\n\nint get_status(int codigo) { return codigo + 1; }\n\nint main() {\n // Declaracao de um ponteiro de funcao\n ?? funcao_ptr = get_status;\n int status = (*funcao_ptr)(200);\n printf(\"Status: %d\\n\", status);\n return 0;\n}\n\nA) int (*funcao_ptr)(int)\nB) int *funcao_ptr(int)\nC) int funcao_ptr(int)\nD) int funcao_ptr;",
+      "answer": [
+        [
+          "A"
+        ]
+      ]
+    }
+  ]
+}

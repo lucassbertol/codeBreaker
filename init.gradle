@@ -1,0 +1,9 @@
+allprojects {
+    repositories {
+        // Removed repository URL rewrite that downgraded https to http, which can cause SSL/protocol issues and is insecure.
+    }
+}
+
+// Configure security settings
+System.setProperty("jdk.tls.client.protocols", "TLSv1.2,TLSv1.3")
+System.setProperty("jdk.security.allowInsecureTransport", "false")

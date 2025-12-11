@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="html">
+  <source path="" />
+  <public path="public_html" />
+  <inherits name="com.badlogic.gdx.backends.gdx_backends_gwt" />
+  <inherits name="com.lucassbertol.codebreaker.MainGame" />
+  <entry-point class="com.lucassbertol.codebreaker.gwt.GwtLauncher" />
+  <set-configuration-property name="gdx.assetpath" value="../assets" />
+  <set-configuration-property name="xsiframe.failIfScriptTag" value="FALSE"/>
+  <extend-configuration-property name="gdx.reflect.include" value="com.lucassbertol.codebreaker.data.QuestionsData" />
+  <extend-configuration-property name="gdx.reflect.include" value="com.lucassbertol.codebreaker.data.Question" />
+</module>
